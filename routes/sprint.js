@@ -42,7 +42,7 @@ router.get('/:user_id', async (req, res) => {
   }
 });
 
-router.post('/', authMiddleware.allowScoreSubmissionAccess, async (req, res) => {
+router.post('/', async (req, res) => {
 	try {
     const {user_id, size, time} = req.body;
     const user = await pool.query('SELECT id FROM "User" WHERE id = $1', [user_id]);
