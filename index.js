@@ -9,7 +9,7 @@ const pool = require('./db');
 
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(cors({
-	origin: 'http://localhost:3000',
+	origin: 'https://square-lab.netlify.app',
 	credentials: true,
 }));
 app.use(express.json());
